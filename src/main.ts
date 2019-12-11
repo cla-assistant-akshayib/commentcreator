@@ -9,9 +9,10 @@ let regexpCC2: RegExp = /\d*\.?\d*\s?([C,c][C,c]2|[C,c]oder [C,c]oins?)/;
 
 async function run() {
   try {
-    console.log("context is " + JSON.stringify(context, null, 2))
+    //console.log("context is " + JSON.stringify(context, null, 2))
     const message = core.getInput('message')
     const prDescription = context.payload.pull_request!.description
+    console.log(prDescription)
     // if (regexpCC2.test(message))
     // {
       
