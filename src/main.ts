@@ -17,7 +17,7 @@ async function run() {
     console.log("This is the message I found: " + description)
     if (regexpCC2.test(description))
     {
-      const amount = regexpCC2.exec(description)![0].substring(-4, description.length-4)
+      const amount = regexpCC2.exec(description)![0].substring(-4, 2)
       console.log("It has an amount!"+ amount)
     }else
     {
