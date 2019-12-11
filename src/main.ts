@@ -9,6 +9,7 @@ let regexpCC2: RegExp = /\d\d*?\.?\d*\s?[C,c][C,c]2/;
 
 async function run() {
   try {
+    //NOTE: check for Null!
     //console.log("context is " + JSON.stringify(context, null, 2))
     const message = core.getInput('message')
     //const prDescription = context.payload!.base.body
@@ -16,7 +17,7 @@ async function run() {
     console.log("This is the message I found: " + description)
     if (regexpCC2.test(description))
     {
-      console.log("It has an amount!")
+      console.log("It has an amount!"+ regexpCC2.exec(description)![0])
     }else
     {
       console.log("It does NOT have an amount")
