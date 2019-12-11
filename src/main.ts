@@ -11,7 +11,7 @@ async function run() {
   try {
     console.log("context is " + JSON.stringify(context, null, 2))
     const message = core.getInput('message')
-    const prDescription = context.payload.pull_request!.comment.body
+    const prDescription = context.payload!.body
     const description = JSON.stringify(prDescription, null, 2)
     console.log("This is the message I found: " + JSON.stringify(prDescription, null,2))
     /*if (regexpCC2.test(description))
