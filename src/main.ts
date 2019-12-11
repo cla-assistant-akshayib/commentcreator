@@ -29,7 +29,7 @@ async function run() {
     console.log("This is the message I found: " + description1)
     if (regexpCC2.test(description1))
     {
-      console.log("We found these many expressions: ", regexpCC2.exec(description1)!.length)
+      console.log("We found these many expressions: ", regexpCC2.exec(description1)!)
     }else
     {
       console.log("It does NOT have an amount")
