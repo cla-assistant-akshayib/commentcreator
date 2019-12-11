@@ -12,7 +12,7 @@ async function run() {
     //console.log("context is " + JSON.stringify(context, null, 2))
     const message = core.getInput('message')
     const prDescription = context.payload.pull_request!.description
-    console.log(prDescription)
+    console.log(JSON.stringify(prDescription, null,2))
     // if (regexpCC2.test(message))
     // {
       
