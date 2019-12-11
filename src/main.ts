@@ -12,7 +12,7 @@ async function run() {
     //NOTE: check for Null!
     //console.log("context is " + JSON.stringify(context, null, 2))
     const message = core.getInput('message')
-    const prDescription = context.payload.body
+    const prDescription = context.payload.base
     console.log(JSON.stringify(prDescription, null, 2))
     const description = "Hello, if you solve this issue, you can get 220.9283 CC2."
     console.log("This is the message I found: " + description)
